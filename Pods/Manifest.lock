@@ -1,0 +1,22 @@
+PODS:
+  - AFNetworking (1.2.0)
+  - WordPressApi (0.0.1):
+    - AFNetworking (>= 1.0)
+    - wpxmlrpc (~> 0.1)
+  - wpxmlrpc (0.4.1)
+
+DEPENDENCIES:
+  - AFNetworking (= 1.2.0)
+  - WordPressApi (from `https://github.com/koke/WordPressApi.git`)
+  - wpxmlrpc (~> 0.4.1)
+
+EXTERNAL SOURCES:
+  WordPressApi:
+    :git: https://github.com/koke/WordPressApi.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 8dd00f053a0239189e72d2315c026ca9b57ac1c8
+  WordPressApi: 6c7ab5320344fbec850f0baba4b0ec2bfd03587d
+  wpxmlrpc: a56b534ad0eb7db28a580eabb68a4a3d3426f6d7
+
+COCOAPODS: 0.33.1

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Age" representedClassName="BDFAge" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="age" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="Buddy" representedClassName="BDFBuddy" parentEntity="FlatBuddyProfile" syncable="YES">
+        <attribute name="displayOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="BuddyProfile" representedClassName="BDFBuddyProfile" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="age" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Age" inverseName="buddyProfile" inverseEntity="Age" syncable="YES"/>
+        <relationship name="country" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Country" inverseName="buddyProfile" inverseEntity="Country" syncable="YES"/>
+        <relationship name="gameplay" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Gameplay" inverseName="buddyProfile" inverseEntity="Gameplay" syncable="YES"/>
+        <relationship name="language" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="buddyProfile" inverseEntity="Language" syncable="YES"/>
+        <relationship name="platform" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Platform" inverseName="buddyProfile" inverseEntity="Platform" syncable="YES"/>
+        <relationship name="playing" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Playing" inverseName="buddyProfile" inverseEntity="Playing" syncable="YES"/>
+        <relationship name="skill" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="buddyProfile" inverseEntity="Skill" syncable="YES"/>
+        <relationship name="time" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Time" inverseName="buddyProfile" inverseEntity="Time" syncable="YES"/>
+        <relationship name="voice" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Voice" inverseName="buddyProfile" inverseEntity="Voice" syncable="YES"/>
+    </entity>
+    <entity name="Country" representedClassName="BDFCountry" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="country" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="FlatBuddyProfile" representedClassName="BDFFlatBuddyProfile" isAbstract="YES" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameplay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playing" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="skill" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="voice" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="years" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Gameplay" representedClassName="BDFGameplay" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="gameplay" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="Language" representedClassName="BDFLanguage" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="language" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="MyProfile" representedClassName="BDFMyProfile" parentEntity="BuddyProfile" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="years" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Years" inverseName="buddyProfile" inverseEntity="Years" syncable="YES"/>
+    </entity>
+    <entity name="Platform" representedClassName="BDFPlatform" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="platform" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="PlayerAttribute" representedClassName="BDFPlayerAttribute" syncable="YES">
+        <attribute name="id" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="sectionName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="Playing" representedClassName="BDFPlaying" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="playing" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="SearchRequest" representedClassName="BDFSearchRequest" parentEntity="BuddyProfile" syncable="YES"/>
+    <entity name="Skill" representedClassName="BDFSkill" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="skill" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="Time" representedClassName="BDFTime" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="time" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="Voice" representedClassName="BDFVoice" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BuddyProfile" inverseName="voice" inverseEntity="BuddyProfile" syncable="YES"/>
+    </entity>
+    <entity name="Years" representedClassName="BDFYears" parentEntity="PlayerAttribute" syncable="YES">
+        <relationship name="buddyProfile" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MyProfile" inverseName="years" inverseEntity="MyProfile" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Age" positionX="288" positionY="72" width="128" height="60"/>
+        <element name="Buddy" positionX="-144" positionY="495" width="128" height="60"/>
+        <element name="BuddyProfile" positionX="178" positionY="249" width="128" height="210"/>
+        <element name="Country" positionX="394" positionY="282" width="128" height="60"/>
+        <element name="FlatBuddyProfile" positionX="9" positionY="456" width="128" height="238"/>
+        <element name="Gameplay" positionX="403" positionY="399" width="128" height="60"/>
+        <element name="Language" positionX="-162" positionY="9" width="128" height="60"/>
+        <element name="MyProfile" positionX="144" positionY="504" width="128" height="88"/>
+        <element name="Platform" positionX="-0" positionY="372" width="128" height="60"/>
+        <element name="PlayerAttribute" positionX="-126" positionY="243" width="128" height="90"/>
+        <element name="Playing" positionX="108" positionY="90" width="128" height="60"/>
+        <element name="SearchRequest" positionX="288" positionY="513" width="128" height="45"/>
+        <element name="Skill" positionX="-90" positionY="126" width="128" height="60"/>
+        <element name="Time" positionX="484" positionY="201" width="128" height="60"/>
+        <element name="Voice" positionX="160" positionY="-0" width="128" height="60"/>
+        <element name="Years" positionX="306" positionY="162" width="128" height="58"/>
+    </elements>
+</model>

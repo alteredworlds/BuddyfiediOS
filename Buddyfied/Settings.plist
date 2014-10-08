@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>buddyReportUserEmail</key>
+	<string>reportuser@buddyfied.com</string>
+	<key>buddyGuestPassword</key>
+	<string>buddyfied</string>
+	<key>buddyGuest</key>
+	<string>guest</string>
+	<key>buddyLostPassword</key>
+	<string>http://www.buddyfied.com/wp-login.php?action=lostpassword</string>
+	<key>buddyHelp</key>
+	<string>http://www.buddyfied.com/buddyfied-ios-app/</string>
+	<key>password</key>
+	<string></string>
+	<key>userName</key>
+	<string></string>
+	<key>buddySite</key>
+	<string>http://dev.buddyfied.com/</string>
+</dict>
+</plist>

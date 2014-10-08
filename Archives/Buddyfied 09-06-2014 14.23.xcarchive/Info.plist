@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/Buddyfied.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.alteredworlds.Buddyfied</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0.0</string>
+		<key>IconPaths</key>
+		<array>
+			<string>Applications/Buddyfied.app/AppIcon40x40@2x.png</string>
+			<string>Applications/Buddyfied.app/AppIcon60x60@2x.png</string>
+		</array>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Tom Gilbert (XJ44DNCXS7)</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>Comment</key>
+	<string>Release Candidate 2</string>
+	<key>CreationDate</key>
+	<date>2014-06-09T13:23:19Z</date>
+	<key>Name</key>
+	<string>Buddyfied</string>
+	<key>SchemeName</key>
+	<string>Buddyfied</string>
+	<key>Status</key>
+	<string>Submitted</string>
+</dict>
+</plist>
